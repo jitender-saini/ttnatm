@@ -1,11 +1,4 @@
-//$(document).ready(function(){
-  // var i=0;
-  // $("#add_row").click(function(){
-  //   $('#addr'+i).html("<td>"+ (i+1) +"</td><td> 1231</td><td>142525</td><td>635645</td><td>6767</td><td>0909</td>");
-  //
-  //   $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-  //   i++;
-  // });
+
 
 function Transaction(two,five,one) {
   this.twoK = two;
@@ -23,6 +16,9 @@ function transact() {
   var two=parseInt(document.getElementById("two-thousand").value);
   var five=parseInt(document.getElementById("five-hundred").value);
   var one=parseInt(document.getElementById("one-hundred").value);
-  var obj = new Transaction(two,five,one);
-  console.log(obj)
+  var obj = new Transaction();
+  console.log(obj);
+
+//s  console.log(obj)
 }
+module.export.transact = transaction

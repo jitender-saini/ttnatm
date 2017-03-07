@@ -1,3 +1,5 @@
+var transact = require("./transaction")
+
 function	Atm(){
   this.twoK=0;
   this.fiveHundred=0;
@@ -15,7 +17,7 @@ function	Atm(){
   }
 
   this.disp = function (){
-    this.currentAmount=this.twoK*(2000)+this.fiveHundred*(500)+this.oneHundred*(100);alert(this.currentAmount)
+    this.currentAmount=this.twoK*(2000)+this.fiveHundred*(500)+this.oneHundred*(100);
     document.getElementById("curAmt").innerHTML="₹"+this.currentAmount;
   }
 
@@ -35,6 +37,7 @@ function util() {
   var one=parseInt(document.getElementById("one-hundred").value);
   first.add(two,five,one);
   first.disp();
+  transact.transact();
 
   console.log(two,five,one);
   console.log(first.twoK  );

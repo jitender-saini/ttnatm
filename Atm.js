@@ -70,3 +70,4 @@ function	Atm(){
 		console.log(this.twoK);
 	}
 }
+module.export.Atm=Atm;
