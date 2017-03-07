@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="transaction.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+		<div class="col-md-12 column">
+			<table class="table table-bordered table-hover" id="tab_logic">
+				<thead>
+					<tr >
+						<th class="text-center">
+							#
+						</th>
+						<th class="text-center">
+							Transaction
+						</th>
+						<th class="text-center">
+							 ₹2000
+						</th>
+						<th class="text-center">
+							 ₹500
+						</th>
+            <th class="text-center">
+							 ₹100
+						</th>
+            <th class="text-center">
+							 Amount left
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					 <tr id='addr0'>
+				<!--		<td>
+						1
+						</td>
+						<td>
+						<input type="text" name='name0'  placeholder='Name' class="form-control"/>
+						</td>
+						<td>
+						<input type="text" name='mail0' placeholder='Mail' class="form-control"/>
+						</td>
+						<td>
+						<input type="text" name='mobile0' placeholder='Mobile' class="form-control"/>
+						</td>-->
+					</tr>
+                    <tr id='addr1'></tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<a id="add_row" class="btn btn-default pull-left">Add Row</a>
+  <a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+</div>
+</body>
+</html>
