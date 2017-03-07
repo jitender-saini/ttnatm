@@ -20,5 +20,9 @@ function Transaction(two,five,one) {
 }
 
 function transact() {
-  var obj = new Transaction()
+  var two=parseInt(document.getElementById("two-thousand").value);
+  var five=parseInt(document.getElementById("five-hundred").value);
+  var one=parseInt(document.getElementById("one-hundred").value);
+  var obj = new Transaction(two,five,one);
+  console.log(obj)
 }

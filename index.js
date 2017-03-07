@@ -18,6 +18,15 @@ function	Atm(){
     this.currentAmount=this.twoK*(2000)+this.fiveHundred*(500)+this.oneHundred*(100);alert(this.currentAmount)
     document.getElementById("curAmt").innerHTML="₹"+this.currentAmount;
   }
+
+  var i = 1;
+  this.update = function(){
+    $('#addr0'+i).html("<td>"+ (i+1) +"</td><td>" + 0 +"</td><td>"+ this.twoK+"</td><td>635645</td><td>6767</td><td>0909</td>");
+
+    $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+    i++;
+  }
+
 }
 function util() {
   var first = new Atm();
@@ -29,12 +38,4 @@ function util() {
 
   console.log(two,five,one);
   console.log(first.twoK  );
-}
-
-var i = 1;
-this.update = function(){
-  $('#addr0'+i).html("<td>"+ (i+1) +"</td><td> 1231</td><td>142525</td><td>635645</td><td>6767</td><td>0909</td>");
-
-  $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
-  i++;
 }
