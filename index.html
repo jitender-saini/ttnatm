@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="Atm.js"></script>
   <script src="index.js"></script>
   <script src="transaction.js"></script>
-  <script src="Atm.js"></script>
+
 </head>
 <body>
 
@@ -58,6 +59,7 @@
       <a id='delete_row' class="pull-right btn btn-default">Delete Row</a> -->
       <!-- </div> -->
       <div class="text-center"> Current Amount is : <label id = "curAmt">₹0 </label></div>
+      <div class="text-center "> Max. limit <input type="number" id = "max"> </input></div>
       <div class="add-money">
         <div class="form-group">
           <table class="table table-bordered table-hover" id="bank_adder">
@@ -73,7 +75,7 @@
             </thead>
             <tr>
               <td class = "text-center">₹2000</td>
-              <td><input type="number" id ="two-thousand"  min = 0 style="width:100%" class="form-control"/></td>
+              <td><input type="number" id ="two-thousand"  min = 0 style="width:100%" class="form-control" /></td>
             </tr>
             <tr>
               <td class = "text-center">₹500</td>
@@ -94,7 +96,7 @@
       <div class="form-group">
         <label for="usr">Enter Amount:</label>
         <input type="number" class="form-control" id="usr"><br>
-        <input type="button" id = "wi" value = "Withdrawl" class="btn btn-primary pull-right" onclick="withdraw()"/>
+        <input type="button" id = "wi" value = "Withdrawl" class="btn btn-primary pull-right" onclick="withdrawMoney()"/>
       </div>
 
     </div>

@@ -1,30 +1,44 @@
 function	Atm(){
-	this.twoK;
-	this.fiveHundred;
-	this.oneHundred;
-	this.currentAmount;
+	this.twoK=0;
+	this.fiveHundred=0;
+	this.oneHundred=0;
+	this.currentAmount=0;
 
-	function add(noOf2kNotes,noOf500Notes,noOf100Notes)
+	this.add = function(obj)
 	{
-		if(noOf2kNotes>0)
-			this.twoK=this.twoK+noOf2kNotes;
-		if(noOf500Notes>0)
-		this.fiveHundred=this.fiveHundred+noOf500Notes;
-		if(noOf100Notes>0)
-		this.oneHundred=this.oneHundred+noOf100Notes;
-		disp();
+		if(obj.twoK>0)
+		this.twoK=this.twoK+obj.twoK;
+		if(obj.fiveHundred>0)
+		this.fiveHundred=this.fiveHundred+obj.fiveHundred;
+		if(obj.oneHundred>0)
+		this.oneHundred=this.oneHundred+obj.oneHundred;
 
 	}
 
-	function disp(){
+	this.retss= function(){
+		return this.currentAmount;
+	}
+
+	this.updates = function(){
+		var ww=document.getElementById("usr").value;
+		var ss=("<tr bgcolor='red'><td>"+ (i+1) +"</td><td>" + ww+"</td><td>"+ this.twoK+"</td><td>"+ this.fiveHundred+"</td><td>"+ this.oneHundred+"</td><td>"+ atmObj.retss()+"</td></tr>");
+
+		$('#tab_logic').append(ss);
+		i++;
+	}
+
+
+
+
+	this.disp = function(){
 		this.currentAmount=this.twoK*(2000)+this.fiveHundred*(500)+this.oneHundred*(100);
 		document.getElementById("curAmt").innerHTML="₹"+this.currentAmount;
 	}
 
-	function withdraw(withdrawAmount)
+	this.withdraw = function(withdrawAmount)
 	{
 		var withdrawAmount2=withdrawAmount;
-		var count[this.twoK, this.fiveHundred,this.oneHundred];
+		var count= [this.twoK, this.fiveHundred,this.oneHundred];
 		var denomination=[2000,500,100];
 		if(withdrawAmount%100!=0)
 		{
@@ -62,12 +76,18 @@ function	Atm(){
 		}
 		else
 		{
-			currentAmount-=withdrawAmount2;
+			this.currentAmount-=withdrawAmount2;
 			this.twoK=count[0];
 			this.fiveHundred=count[1];
 			this.oneHundred=count[2];
+			atmObj.updates();
 		}
-		console.log(this.twoK);
+		console.log(this.twoK,this.fiveHundred,this.oneHundred);
+
 	}
+
+	var i = 1;
+
 }
-module.export.Atm=Atm;
+//module.export={Atm:Atm()};
+var atmObj = new Atm();
